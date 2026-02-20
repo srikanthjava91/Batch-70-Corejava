@@ -22,11 +22,16 @@ public class TestDataTypeDemo2 {
 //		Integer i3 = b2;
 //		System.out.println(i3);
 
+//		 The cache range is -128 to 127 only
 		Integer i4 = 127;
 		Integer i5 = 127;
 
+		// == Operators always compare the addresses of the Object
+		// In the case of i4 & i5 only one Object created and its using same cache.
+//		SO we will get true.
 		System.out.println(i4 == i5);// both are same --> true
 
+		// i6 & i7 will 2 different objects, so will get false
 		Integer i6 = 200;
 		Integer i7 = 200;
 		System.out.println(i6 == i7);// both are not same --> false
