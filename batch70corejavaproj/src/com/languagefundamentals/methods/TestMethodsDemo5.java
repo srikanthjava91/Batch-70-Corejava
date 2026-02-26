@@ -3,9 +3,13 @@ package com.languagefundamentals.methods;
 //with argument + no return type 
 public class TestMethodsDemo5 {
 
+	static int a = 20, b = 10;
+
 	public static void main(String[] args) {
 		System.out.println("main method started !!");
 
+		System.out.println(a);
+		System.out.println(b);
 		// Call by value
 		greet("good morning ", 10);
 		addition(100, 200);
