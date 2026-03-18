@@ -12,6 +12,9 @@ public class Student {
 	// Parameterized constructors
 	Student(String sid, String sname, int sage) {
 		System.out.println("Parameterized construcor called ");
+		this.sid = sid;
+		this.sname = sname;
+		this.sage = sage;
 
 	}
 
@@ -32,6 +35,7 @@ public class Student {
 		System.out.println(sid);
 		System.out.println(sname);
 		System.out.println(sage);
+		System.out.println("*********************");
 	}
 
 }
