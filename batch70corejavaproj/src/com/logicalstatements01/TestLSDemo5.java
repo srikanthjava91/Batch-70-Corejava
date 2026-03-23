@@ -29,7 +29,7 @@ public class TestLSDemo5 {
 		} else {
 			System.out.println("Failed ");
 		}
-		
+
 		sc.close();
 
 	}
