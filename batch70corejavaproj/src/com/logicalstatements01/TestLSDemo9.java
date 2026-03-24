@@ -13,7 +13,10 @@ public class TestLSDemo9 {
 
 		switch (t_shirtSize) {
 
-		case 36 -> System.out.println("Small-size T shirt");
+		case 36 -> {
+			System.out.println("Small-size T shirt");
+			System.out.println("Small-size T shirt");
+		}
 		case 38 -> System.out.println("Medium-size T shirt");
 		case 40 -> System.out.println("Large-size T shirt");
 		case 42 -> System.out.println("Xtra Large-size T shirt");
