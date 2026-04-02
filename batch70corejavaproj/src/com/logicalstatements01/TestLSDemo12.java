@@ -7,19 +7,28 @@ public class TestLSDemo12 {
 
 	static String getDayInfo(String day) {
 
-		switch (day) {
-		case "Monday":
-			return "Lazy day";
-		case "Tuesday", "Wedenesday", "Thursday":
-			return "Normal Days";
-		case "Friday":
-			return "Weekend mode started ";
-		case "Saturday", "Sunday":
-			return "Weekend with Holidays";
-		default:
-			return "entered day is invalid";
-
+		return switch (day) {
+		case "Monday" -> {
+			yield "Lazy day";
 		}
+		case "Tuesday", "Wedenesday", "Thursday" -> {
+			yield "Normal Days";
+		}
+		case "Friday" -> {
+			yield "Weekend mode started ";
+		}
+		case "Saturday", "Sunday" -> {
+			yield "Weekend with Holidays";
+		}
+		default -> {
+			yield "entered day is invalid";
+		}
+		
+		
+		};
+		
+//		System.out.println("Hello");//Unreachable code
+		
 
 	}
 
