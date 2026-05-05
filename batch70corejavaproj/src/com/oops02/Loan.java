@@ -7,6 +7,15 @@ public class Loan {
 
 	static Scanner sc = new Scanner(System.in);
 
+	Object hello() {
+		return new Object();
+	}
+
+	Number getPhone() throws Exception {
+		Long l = 9972677655L;
+		return l;
+	}
+
 	String getCustomerAddressDetails() {
 		String address = null;
 
