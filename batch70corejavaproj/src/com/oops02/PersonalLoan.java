@@ -3,7 +3,7 @@ package com.oops02;
 import java.util.Scanner;
 
 //Child or Sub or Derived class 
-public class PersonalLoan extends Loan {
+public class PersonalLoan extends LoanImpl {
 
 	static Scanner sc = new Scanner(System.in);
 
@@ -44,15 +44,14 @@ public class PersonalLoan extends Loan {
 //	Should I create same method in child class with private access modifier or any access modifier.?
 //	Yes until you use @Override annotation. If we use @Override annotation its not considering as MOR (CE).
 
-	
 //	5) If the Parent class method is static, We cannot override, because the static methods are loading when the class is loading, 
 //	but MOR concepts is depending on Object creation. This process is called Method Hiding.
-	
+
 //	Note : If the Parent class consist of static method, should we create same method in child class with static ..? 
 //	Yes until you use @Override annotation. If we use @Override annotation its not considering as MOR (CE).
-	
+
 //	6) If the Parent class method is final, we cannot override final methods into child class.
-	
+
 //	Note : final is a non-access modifier to provide some specifications in Java like below.
 //	i)If the class is final, we cannot extends that class for Child. 
 //	(The type TestB cannot subclass the final class TestA)
@@ -61,28 +60,27 @@ public class PersonalLoan extends Loan {
 //	Note: If the class is final, all methods inside that class is also final.
 //	ii) If the variable is final, we cannot change the value of a variable.
 //	Note : : If the class is final, all variables inside that class is not final.
-	
+
 //	Note : final methods or variables we can access outside of the classes or packages Based on Access modifier.
-	
+
 //	7) If The Parent class method throws any Exception, the child method no need to throws the any exception.
 //	But, If the child class method throws any Exception, then the Parent class must throws the same exception or it's parent Exception.
-	
+
 //	8) abstract methods from Abstract class must Override it into child class 
 //	and the Implemented method from child class is also have a another child class which is abstract, 
 //	Can we Override the Implemented method as abstract method from 1st child class to next child class..? Yes
-	
-	
+
 	String hello() {
 		return "hello";
 	}
 
-	 Number getPhone() throws CloneNotSupportedException{
+	public Number getPhone() throws CloneNotSupportedException {
 		int l = 9972677;
 		return l;
 	}
 
 	@Override
-	double getROI() {
+	public double getROI() {
 		return 8.5;
 	}
 
@@ -95,7 +93,7 @@ public class PersonalLoan extends Loan {
 
 //		Scenario 2: By using Parent Object & Parent Reference, what we call ..? 
 //		ans : We can call only Parent Loan class functionalities but not child class functionalities.
-		Loan l1 = new Loan();
+		Loan l1 = new LoanImpl();
 
 //		Scenario3 : Can we store Child Object into parent reference ..? 
 //		ans : Yes !! which will consider as Up-Casting.
@@ -121,7 +119,7 @@ public class PersonalLoan extends Loan {
 //		java.lang.ClassCastException:
 //		class com.oops02.Loan cannot be cast to class com.oops02.PersonalLoan 
 
-		PersonalLoan p2 = (PersonalLoan) new Loan();// Type mismatch: cannot convert from Loan to PersonalLoan
+		PersonalLoan p2 = (PersonalLoan) new LoanImpl();// Type mismatch: cannot convert from Loan to PersonalLoan
 		p2.getROI();
 
 		int cibil = pl.getCibiliScore();

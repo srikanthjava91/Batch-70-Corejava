@@ -1,6 +1,6 @@
 package com.oops02;
 
-public class HomeLoan extends Loan {
+public class HomeLoan extends LoanImpl {
 
 	void getHomeLoanDocInfo() {
 		System.out.println("All docs submitted Successfully !!");

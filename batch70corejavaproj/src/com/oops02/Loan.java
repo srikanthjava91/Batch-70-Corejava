@@ -1,88 +1,23 @@
 package com.oops02;
 
-import java.util.Scanner;
+public interface Loan {
 
-//Parent or Super or Base
-public class Loan {
+	public abstract String getCustomerAddressDetails();
 
-	static Scanner sc = new Scanner(System.in);
+	public abstract Number getPhone() throws Exception;
 
-	Object hello() {
-		return new Object();
-	}
+	public abstract boolean isValidPAN();
 
-	Number getPhone() throws Exception {
-		Long l = 9972677655L;
-		return l;
-	}
+	public abstract boolean isValidPhone();
 
-	String getCustomerAddressDetails() {
-		String address = null;
+	public abstract boolean isValidAadhaar();
 
-		System.out.println("Enter your Flat number : ");
-		String fno = sc.next();
+	public abstract double getROI();
 
-		System.out.println("Enter your plot number  : ");
-		sc.nextLine();
-		String plot = sc.nextLine();
+	public abstract int getCibiliScore();
 
-		System.out.println("ENter Your Street name ");
-		String street = sc.nextLine();
+	public abstract int getCustomerAge();
 
-		System.out.println("ENter Your City name ");
-		String city = sc.nextLine();
-
-		System.out.println("ENter Your PINCODE  ");
-		long pin = sc.nextLong();
-
-		address = "Flat NO : " + fno + " , Plot  :" + plot + " , Street : " + street + " , City : " + city + " , PIN : "
-				+ pin;
-
-		return address;
-	}
-
-//	UAN PAN 
-//	AMIPC1234A
-	public boolean isValidPAN() {
-
-		System.out.println("Enter PAN number :  ");
-		String pan = sc.next();
-		return pan.matches("[A-Z]{5}[0-9]{4}[A-Z]{1}");
-	}
-
-	public boolean isValidPhone() {
-		System.out.println("Enter your Phone numbe r: ");
-		String phone = sc.next();
-		return phone.matches("[6-9]\\d{9}");
-	}
-
-	public boolean isValidAadhaar() {
-
-		System.out.println("Enter 12 digit Aadhar number ");
-		String aadhaar = sc.next();
-		return aadhaar.matches("\\d{12}");
-	}
-
-	double getROI() {
-		return 10.5;
-	}
-
-	int getCibiliScore() {
-		System.out.println("Enter your Cibil Score ");
-		int cibil = sc.nextInt();
-		return cibil;
-	}
-
-	int getCustomerAge() {
-		System.out.println("Customer Age :");
-		int age = sc.nextInt();
-		return age;
-	}
-
-	double getCustomerSalary() {
-		System.out.println("Enter your Salary : ");
-		double salary = sc.nextDouble();
-		return salary;
-	}
+	public abstract double getCustomerSalary();
 
 }
