@@ -34,7 +34,7 @@ public class TestCollectionDemo2 {
 		indianTeam.addAll(bowlers);
 		indianTeam.addAll(batsmens);
 
-		bowlers.clear();
+//		bowlers.clear();
 		System.out.println(bowlers);
 		System.out.println(indianTeam);//
 
@@ -48,10 +48,27 @@ public class TestCollectionDemo2 {
 		System.out.println(indianTeam.containsAll(bowlers));// true
 		System.out.println(indianTeam.containsAll(allRounders));// true
 		
-		indianTeam.clear();
+//		indianTeam.clear();
 		if(!indianTeam.isEmpty()) {
 			System.out.println("Welcome to Indian Team !! All the best ");
 		}
+		
+		System.out.println(allRounders);
+		System.out.println(batsmens);
+		System.out.println(bowlers);
+		System.out.println("-------------------------------");
+		System.out.println(batsmens.remove("Dhoni"));
+		
+		System.out.println(batsmens);
+		
+		indianTeam.addAll(allRounders);
+		System.out.println(indianTeam);
+		
+		indianTeam.removeAll(allRounders);
+		System.out.println(indianTeam);
+		indianTeam.clear();
+		System.out.println(indianTeam);
+		
 
 	}
 

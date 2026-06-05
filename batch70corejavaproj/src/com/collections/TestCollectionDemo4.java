@@ -19,16 +19,21 @@ public class TestCollectionDemo4 {
 		batsmens.add("Rahul");
 		System.out.println(batsmens);
 
+		batsmens.removeIf(s -> s.equals("Rohit"));
+
 		Iterator<String> itr = batsmens.iterator();
 		while (itr.hasNext()) {
 			System.out.println(itr.next());
 		}
 
-		System.out.println("***************************");
+		System.out.println("******for each*********************");
 		// enhanced for loop or for each loop
-		for (String batsMen : batsmens) {
-			System.out.println(batsMen);
-		}
+//		for (String batsMen : batsmens) {
+//			System.out.println(batsMen);
+//			if (batsMen.equals("Iyer")) {
+//				batsmens.remove(batsMen);
+//			}
+//		}
 
 	}
 
