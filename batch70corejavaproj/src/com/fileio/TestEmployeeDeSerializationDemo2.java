@@ -1,0 +1,28 @@
+package com.fileio;
+
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+
+//java.io.InvalidClassException
+public class TestEmployeeDeSerializationDemo2 {
+
+	public static void main(String[] args) throws IOException, ClassNotFoundException {
+
+		//De-serialization
+		FileInputStream fis = new FileInputStream("C:\\Users\\srknt\\Srikanth Java\\test\\sri\\java123.ser");
+		ObjectInputStream ois = new ObjectInputStream(fis);
+
+		Employee obj = (Employee) ois.readObject();
+		
+		System.out.println(obj.username);
+		System.out.println(obj.password);
+		System.out.println(obj.phone);
+		System.out.println(obj.age);
+		
+		ois.close();
+		fis.close();
+
+	}
+
+}

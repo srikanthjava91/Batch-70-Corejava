@@ -1,0 +1,24 @@
+package com.stringhandling;
+
+public class TestStrDemo15 {
+
+	public static void main(String[] args) {
+
+		String str = String.join("-", "Java", "is", "simple", "in", "vcube");
+		System.out.println(str);
+
+		String str1 = "Good-Morning-Kodand-Ram-Have-nice-a-day";
+		String[] words = str1.split("-", 4);
+		int count = 0;
+
+		for (String word : words) {
+			count++;
+			System.out.println(word);
+		}
+
+		System.out.println("count of all the word s: " + count);
+		System.out.println(str.length());
+
+	}
+
+}
